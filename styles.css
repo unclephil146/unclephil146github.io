@@ -1,0 +1,217 @@
+
+/* MOBILE */
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url(images/boravak.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar, .footer{
+    background-color: rgb(207, 170, 127);
+    color: rgb(255, 255, 255);
+}
+
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+img{
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Flexbox */
+.flex-container{
+    display: flex;
+    gap: 20px;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.align-center{
+    align-items: center;
+}
+.justify-center{
+    justify-content: center;
+}
+.justify-around{
+    justify-content: space-around;
+}
+.flex-column{
+    flex-direction: column;
+}
+.flex-row{
+    flex-direction: row;
+}
+
+/* Header */
+
+.main-nav{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.mobile-nav{
+    font-size: 24px;
+}
+
+/* Headline */
+.headline{
+    height: calc(100vh - 100px);
+    
+    padding: 0 10px;
+}
+.headline h1{
+    background-color: rgba(255, 217, 0, 0.753);
+    color: black;
+    padding: 20px;
+    font-size: 49px;
+    text-align: center;
+    text-shadow: white;
+    border-radius: 10px;
+}
+
+/* Content */
+.content{
+    /* padding: 20px; */
+}
+
+.content h2{
+    margin-bottom: 40px;
+    font-size: 70px;
+    text-align: center;
+}
+
+.content article{
+    padding: 5px;
+    background-color: white;
+    color: black;
+    margin-bottom: 10px;
+    border-radius: 12px;
+}
+.content article img{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.content article h3{
+    text-align: center;
+}
+.content article p{
+    margin: 10px;
+    text-align: justify;
+}
+
+/* FOOTER */
+footer{
+    text-align: center;
+}
+
+.footer-nav{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+.footer-nav a{
+    color: black;
+    text-decoration: none;
+}
+
+.footer-nav a:hover{
+    color: rgb(53, 143, 1);
+}
+
+/* TABLET */
+@media screen and (min-width: 768px){
+    .content article{
+        width: calc(50% - 20px);
+    }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1199px){
+    .flex-row-desktop{
+        flex-direction: row;
+    }
+
+    .content article{
+        width: calc(33% - 20px)
+    }
+
+    footer div:first-child{
+        text-align: left;
+    }
+
+    .footer-nav{
+        text-align: right;
+    }
+
+    .mobile-nav{
+        display: none;
+    }
+    .main-nav{
+        display: flex;
+    }
+    .main-nav li{
+        margin: 0 10px;
+    }
+    .main-nav a{
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        font-size: 22px;
+    }
+    .main-nav a::after{
+        content: '';
+        display: block;
+        width: 0;
+        height: 3px;
+        background: rgb(255, 255, 255);
+        transition:  0.5s;
+    
+    }
+
+    .main-nav a:hover::after{
+        width: 100%;
+    }
+    
+    .main-nav a:hover{
+        color: gold;
+    }
+}
+
+
+.card-title{
+    animation: changeColor 1s infinite alternate;
+}
+
+@keyframes changeColor {
+    from { color: black; }
+    to { color: red; }
+}
+
+.article{
+    background-color: white;
+    transition: all 0.3s;
+}
+.article:hover{
+    background-color: rgb(228, 226, 138);
+}
